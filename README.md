@@ -1,6 +1,6 @@
 # CursoDataScience
-- [x] 1.- Kick-Off
-- [x] 2.- Fundamentos de Programación y estructura de Datos
-- [x] 3.- Control de Flujo y Ciclos
-- [x] 4.- Funciones y Modulación
-- [x] 5.- Conexión y Consumo de APIs
+- [1.- Kick-off](https://github.com/antosource/CursoDataScience/tree/main/1)
+- 2.- Fundamentos de Programación y estructura de Datos
+- 3.- Control de Flujo y Ciclos
+- 4.- Funciones y Modulación
+- 5.- Conexión y Consumo de APIs
