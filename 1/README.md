@@ -22,6 +22,8 @@ https://code.visualstudio.com/download
 * Bajar e instalar Ubuntu LTS *(a la fecha de esta guia es 20.04.4)*. El Proceso puede tomar varios minutos
 * Pedirá un usuario *(Se sugiere el nombre)*
 * Pedirá una contraseña *(Colocar una y no perderla)*
+* Si windows solicita habilitar el subsistema de linux :
+  * Entrar a powershell como administrador y ejecutar :  wsl --install 
 * Aca se puede bajar la versión para otros sistemas operativos: https://ubuntu.com/download/desktop
 
 ## Instalar git
