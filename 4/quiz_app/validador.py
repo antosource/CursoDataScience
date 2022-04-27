@@ -7,7 +7,6 @@ def validate(opciones, eleccion):
 '''
 En Opciones se puede ingresar una lista y eleccion es la opcion a validar 
 '''
-
 #Test
 if __name__ == '__main__':
     eleccion = input('Ingresa una Opción: ').lower()
