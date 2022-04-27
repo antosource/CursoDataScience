@@ -13,7 +13,7 @@ import sys
 # valores iniciales - 
 lval1 = ['0','1']
 lval2 = ['1','2','3']
-lval3 = ['a', 'b', 'c','d']
+lval3 = ['a','b','c','d']
 lval4 = ['y','n']
 n_pregunta = 0
 continuar = 'y'
@@ -36,9 +36,10 @@ opcion = input('''Ingrese una opción para Jugar!
 opcion = validate (lval1,opcion)
 # 2. Definir el comportamiento de Salir
 if opcion == '0':
-    print()
+    print('Fin!')
     time.sleep(2)
     os.system(op_sys)
+    exit()
     # finalizar programa
    
 # Funcionamiento de preguntas
@@ -64,7 +65,7 @@ while correcto and n_pregunta < 3*p_level:
         validate(lval3, respuesta)
                      
         # 8. Verificar si la respuesta es correcta o no
-        verificar(alternativas, respuesta)
+        correcto = verificar(alternativas, respuesta)
       
         if correcto and n_pregunta < 3*p_level:
             print('Muy bien sigue así!')

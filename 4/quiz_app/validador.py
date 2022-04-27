@@ -1,8 +1,7 @@
 def validate(opciones, eleccion):
    
     while eleccion not in opciones: # Se pueden colocar condiciones logícas 
-        print(f'"{eleccion}" No es una opción Válida, ingrese una de las opciones válidas: {opciones}')
-        eleccion = input('Ingresa una Opción: ').lower()   
+        eleccion = input(f'"{eleccion}" No es una opción Válida, \nIngrese una de las opciones válidas: {opciones} ->').lower()   
     return eleccion
 
 '''

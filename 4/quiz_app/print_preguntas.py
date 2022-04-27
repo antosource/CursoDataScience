@@ -4,13 +4,16 @@ def print_pregunta(enunciado, alternativas):
     
     # Imprimir enunciado y alternativas
     ###############################################################
-   alter = ['A', 'B', 'C','D']
-   index = list({k for k,v in alternativas})
+    #alter = ['A', 'B', 'C','D']
+    #index = list({k for k,v in alternativas})
     
-   print(f"{'[, '.join(enunciado)}")
+    #print(f"{'[, '.join(enunciado)}")
    
-   for i in alter:
-    print(f"{i}. {index[alter.index(i)]}")
+    #for i in alter:
+    #    print(f"{i}. {index[alter.index(i)]}")
+
+    print(enunciado,
+    f'\nA. {alternativas[0]}\nB. {alternativas[1]}\nC. {alternativas[2]}\nD. {alternativas[3]}')
             
     ###############################################################
         
