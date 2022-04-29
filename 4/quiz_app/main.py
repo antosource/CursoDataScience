@@ -44,7 +44,8 @@ if opcion == '0':
     # finalizar programa
     exit()
 
-    # Funcionamiento de preguntas
+    # Funcionamiento de preguntas1
+       
 while correcto and n_pregunta < 3*p_level:
     
     if n_pregunta == 0:
@@ -81,11 +82,11 @@ while correcto and n_pregunta < 3*p_level:
             os.system(op_sys)
         elif correcto and n_pregunta == 3*p_level:
             print(f'Felicitaciones, Has respondido {3*p_level} preguntas correctas. \n Has ganado la Trivia \n Gracias por Jugar, hasta luego!!!')
-            time.sleep(3)
+            time.sleep(5)
             os.system(op_sys)
         else: 
             print(f'Lo siento, conseguiste {n_pregunta - 1} respuestas correctas,\n Sigue participando!!')
-            time.sleep(3)
+            time.sleep(5)
             exit()
     else: 
         print('Nos vemos la proxima vez, sigue practicando')
