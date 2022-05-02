@@ -1,5 +1,29 @@
+#Plantilla HTML modificada
 from string import Template
-validacion_pokemon = 'Por favor ingrese nombre valido de algún pokemon : '
+
+validacion_pokemon = 'Por favor ingrese nombre valido de algún pokemon: '
+validacion_opcion = 'Por favor ingrese una opción valida: '
+
+mensaje_opcion = '''Bienvenidos a la Poke-APP
+    ¿Que deseas conocer del mundo Pokemon?
+    
+    1. Pokedex
+    2. Cadena de Evolución
+    0. Salir
+    > '''
+
+mensaje_pokedex = '''Ingrese el Nombre de un Pokemon para verlo en el Pokedex
+Nota: Si el Pokemon tiene espacios reemplace por "-".
+No coloque ningún tipo de signo de puntuación adicional.
+Ejemplo: Mr. Mime, se debe ingresar como Mr-Mime o mr-mime
+>'''
+
+stats_es = {'hp': 'HP',
+            'attack': 'Ataque',
+            'defense': 'Defensa',
+            'special-attack' : 'Ataque Especial',                      
+            'special-defense' : 'Defensa Especial',
+            'speed' : 'Velocidad'}                      
 
 document_template = Template(''' <!DOCTYPE html>
 <html>
@@ -15,7 +39,7 @@ $body
 </html>
 ''')
 
-single_card = '''<div class="column2">
+single_card = Template('''<div class="column2">
     <div class="card">
     <h1>#$id $name</h1>
         <img src="$url" width="150" height="150">
@@ -49,4 +73,4 @@ single_card = '''<div class="column2">
     </div>
     </div>
 
-'''
+''')

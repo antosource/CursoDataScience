@@ -1,3 +1,4 @@
+#Validador parte de lo entregado
 with open("pokemon_list.txt", "r") as f:
     pokemon_lista = f.readlines()
     
