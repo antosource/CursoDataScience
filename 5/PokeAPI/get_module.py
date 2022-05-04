@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 def get_info(url):
     return json.loads(requests.get(url).text)
 

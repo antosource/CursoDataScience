@@ -16,5 +16,4 @@ def show_pics(html, nombre):
     time.sleep(2)
     webbrowser.open(f'{nombre}.html')
     time.sleep(5)
-    os.remove(f'{nombre}.html')
-    
+    os.remove(f'{nombre}.html')   

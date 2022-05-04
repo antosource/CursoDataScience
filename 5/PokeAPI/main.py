@@ -2,6 +2,7 @@ from poke_validation import validate
 from show import show_pics
 
 from get_base_info import get_base_pokemon
+from get_species_info import get_species
 from build_pokemon_html import build_html
 import data as d
 
@@ -16,10 +17,9 @@ while True:
         pokemon = validate(pokemon)  
         
         base_info = get_base_pokemon(pokemon)
-        
-        html = build_html(base_info)
+        base_species =  get_species(pokemon)    
+        html = build_html(base_info,base_species)
         
         show_pics(html,'pokedex')
     else :
-        break    
-        
+        break

@@ -1,7 +1,7 @@
 #Plantilla HTML modificada
 from string import Template
 
-validacion_pokemon = 'Por favor ingrese nombre valido de algún pokemon: '
+validacion_pokemon = 'Por favor ingrese nombre válido de algún pokemon: '
 validacion_opcion = 'Por favor ingrese una opción valida: '
 
 mensaje_opcion = '''Bienvenidos a la Poke-APP
@@ -22,8 +22,31 @@ stats_es = {'hp': 'HP',
             'attack': 'Ataque',
             'defense': 'Defensa',
             'special-attack' : 'Ataque Especial',                      
-            'special-defense' : 'Defensa Especial',
-            'speed' : 'Velocidad'}                      
+            'special-defense' : 'Def. Especial',
+            'speed' : 'Velocidad'} 
+
+tipo_es = {'fire': 'Fuego',
+           'flying': 'Volador',
+           'electric':'Eléctrico',
+           'water': 'Agua',
+           'ground': 'Tierra',
+           'steel': 'Metal',
+           'ice': 'Hielo',
+           'bug': 'Insecto',
+           'dragon': 'Dragón',
+           'ghost' : 'Fantasma',
+           'fairy': 'Hada',
+           'fighting': 'Luchador',
+           'normal': 'Normal',
+           'grass': 'Planta',
+           'psychic': 'Psiquico',
+           'rock': 'Roca',
+           'dark': 'Siniestro',
+           'poison': 'Veneno',
+           'baby':'Bebé',
+           'legendary': 'Legendario',
+           'mythical': 'Mitico'    
+           }                                 
 
 document_template = Template(''' <!DOCTYPE html>
 <html>
@@ -44,7 +67,9 @@ single_card = Template('''<div class="column2">
     <h1>#$id $name</h1>
         <img src="$url" width="150" height="150">
     <div class="container">
-        $etapa_previa
+
+      $etapa_previa
+
         <h2>Estadísticas</h2>
         <table>
             <tr>
