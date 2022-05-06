@@ -4,6 +4,7 @@ from show import show_pics
 from get_base_info import get_base_pokemon
 from get_species_info import get_species
 from build_pokemon_html import build_html
+
 import data as d
 
 import time

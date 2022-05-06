@@ -1,4 +1,5 @@
 from string import Template
+from get_types import get_types_inf
 import data as d
 
 def build_html(base_info, base_species, doc_template = d.document_template, card_template = d.single_card):
@@ -17,8 +18,9 @@ def build_html(base_info, base_species, doc_template = d.document_template, card
     if base_species['tipo_esp']=='': tipo_esp=''
     else: tipo_esp = tipos_templ.substitute(label_class = base_species['tipo_esp'],value_class= base_species['tipo_esp'] )
 
+
     # Fortalezas y resistencias
-    super_ef = 'Lorem_ipsum'
+    super_ef = f"{base_info['tipo']}"
     debil = 'Lorem_ipsum'
     resistente = 'Lorem_ipsum'
     poco_ef='Lorem_ipsum'
