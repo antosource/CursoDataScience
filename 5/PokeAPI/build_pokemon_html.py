@@ -1,5 +1,6 @@
+from email.mime import base
 from string import Template
-from get_types import get_types_inf
+from get_types import get_types_info
 import data as d
 
 def build_html(base_info, base_species, doc_template = d.document_template, card_template = d.single_card):
@@ -18,15 +19,28 @@ def build_html(base_info, base_species, doc_template = d.document_template, card
     if base_species['tipo_esp']=='': tipo_esp=''
     else: tipo_esp = tipos_templ.substitute(label_class = base_species['tipo_esp'],value_class= base_species['tipo_esp'] )
 
+    # Obtener Fortalezas y resistencias
+    rel= get_types_info(base_info['tipo'])
 
-    # Fortalezas y resistencias
-    super_ef = f"{base_info['tipo']}"
-    debil = 'Lorem_ipsum'
-    resistente = 'Lorem_ipsum'
-    poco_ef='Lorem_ipsum'
-    inmune = 'Lorem_ipsum'
-    inef = 'Lorem_ipsum'       
-       
+    # Publicar Fortalezas y resistencias 
+    sef_templ = Template('<span class="label $label_class"> $value_class </span>')
+    super_ef = ''.join(sef_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['double_damage_to'])
+
+    deb_templ = Template('<span class="label $label_class"> $value_class </span>')
+    debil = ''.join(deb_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['double_damage_from'])
+
+    res_templ = Template('<span class="label $label_class"> $value_class </span>')
+    resistente = ''.join(res_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['half_damage_from'])
+
+    poc_templ = Template('<span class="label $label_class"> $value_class </span>')
+    poco_ef = ''.join(poc_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['half_damage_to'])
+
+    inm_templ = Template('<span class="label $label_class"> $value_class </span>')
+    inmune = ''.join(inm_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['no_damage_from'])
+
+    ine_templ = Template('<span class="label $label_class"> $value_class </span>')
+    inef = ''.join(ine_templ.substitute(label_class = tipo_rel, value_class=d.tipo_es[tipo_rel])for tipo_rel in rel['no_damage_to'])
+
     card = card_template.substitute(id = base_info['id'],
                                     name = base_info['name'],
                                     url = base_info['img'],

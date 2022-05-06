@@ -22,4 +22,3 @@ def get_species(name):
 if __name__ == '__main__':
     name = 'mewtwo'
     print(get_species(name))
-    

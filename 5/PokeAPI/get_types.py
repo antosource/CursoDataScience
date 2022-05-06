@@ -14,6 +14,12 @@ def get_types_info(lista):
     return (damage_relations)
 
 if __name__ == '__main__':
-    name = ('fire','flying')
-    rel = get_types_info(name)
-    print (f"Super efectivo contra: {rel['double_damage_to']}")
+    tipos = ('fire','flying')
+    rel = get_types_info(tipos)
+    print (f'''\nSuper efectivo contra: {rel['double_damage_to']}
+Débil contra: {rel['double_damage_from']}
+Resistente contra: {rel['half_damage_from']}
+Poco eficaz contra: {rel['half_damage_to']}
+Inmune contra: {rel['no_damage_from']}
+ineficaz contra: {rel['no_damage_to']}
+    ''')

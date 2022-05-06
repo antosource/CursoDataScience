@@ -7,8 +7,6 @@ from build_pokemon_html import build_html
 
 import data as d
 
-import time
-
 while True:
     opcion = input(d.mensaje_opcion)
     opcion = int(validate(opcion,['0','1','2'], mensaje = d.validacion_opcion))
