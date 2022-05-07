@@ -7,7 +7,7 @@ def get_species(name):
     data = get_info(url)
     lema =[i['flavor_text'] for i in data['flavor_text_entries'] if i['language']['name'] == 'es']
     previo = data['evolves_from_species']['name'] if data['evolves_from_species']!=None else "No Tiene"
-    if data['is_baby']: tipo_esp = 'bebé'
+    if data['is_baby']: tipo_esp = 'Bebé'
     elif data['is_legendary']: tipo_esp = 'Legendario'
     elif data['is_mythical']: tipo_esp = 'Mitico'
     else : tipo_esp =''
@@ -19,6 +19,7 @@ def get_species(name):
             
     return base_species
 
+#Testing
 if __name__ == '__main__':
     name = 'mewtwo'
     print(get_species(name))

@@ -19,6 +19,6 @@ while True:
         base_species =  get_species(pokemon)    
         html = build_html(base_info,base_species)
         
-        show_pics(html,'pokedex')
+        show_pics(html,'Pokedex')
     else :
         break

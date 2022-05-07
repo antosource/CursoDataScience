@@ -13,6 +13,7 @@ def validate(name, p_l = pokemon_lista, mensaje = d.validacion_pokemon):
 
     return name
 
+#Testing
 if __name__ == '__main__':
     name = 'codigocero'
     print(validate(name))

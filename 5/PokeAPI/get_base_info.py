@@ -11,7 +11,7 @@ def get_base_pokemon(name):
         'tipo': [elemento['type']['name'] for elemento in data['types']]
         }
     return base_info
-
+#Testing
 if __name__ == '__main__':
     name = 'pikachu'
     print(get_base_pokemon(name)) 

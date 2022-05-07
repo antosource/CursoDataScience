@@ -58,6 +58,7 @@ def build_html(base_info, base_species, doc_template = d.document_template, card
                                     etapa_previa = etapa_previa)
     return doc_template.substitute(body=card)   
 
+#Testing
 if __name__ == '__main__':
    from get_base_info import get_base_pokemon
 

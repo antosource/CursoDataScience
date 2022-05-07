@@ -55,7 +55,7 @@ document_template = Template(''' <!DOCTYPE html>
         <link rel="stylesheet" href="mystyle.css">
     </head>
 <body>
-
+<div class= "div-1">  <img src = https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png > </div>
 $body
 
 </body>
@@ -69,6 +69,7 @@ single_card = Template('''<div class="column2">
     <div class="container">
 
       $etapa_previa
+    <p>$description</p>
 
         <h2>Estadísticas</h2>
         <table>
@@ -79,9 +80,7 @@ single_card = Template('''<div class="column2">
         <h3><b>Tipo</b></h3> 
             $tipos
             $tipo_especial
-            
-        <p>$description</p>
-        
+         
     <h3>Super efectivo contra:</h3>
         $super_ef
     <h3>Débil contra:</h3>

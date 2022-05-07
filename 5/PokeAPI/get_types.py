@@ -13,6 +13,7 @@ def get_types_info(lista):
       
     return (damage_relations)
 
+#Testing
 if __name__ == '__main__':
     tipos = ('fire','flying')
     rel = get_types_info(tipos)
