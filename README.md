@@ -10,11 +10,11 @@
 
 
 ## Fundamentos Data Science
-- [1.- Estadística univariada y control de flujo]()
-- [2.- Probabilidades y funciones]()
-- [3.- Variables aleatorias y gráficos]()
-- [4.- Hipotesis y correlación]()
-- [5.- Regresión]()
-- [6.- Modelos de clasificación]()
-- [7.- Dimensionalidad y agrupación]()
-- [8.- Modelos generalizados]()
+- [1.- Estadística univariada y control de flujo](https://github.com/antosource/CursoDataScience)
+- [2.- Probabilidades y funciones](https://github.com/antosource/CursoDataScience)
+- [3.- Variables aleatorias y gráficos](https://github.com/antosource/CursoDataScience)
+- [4.- Hipotesis y correlación](https://github.com/antosource/CursoDataScience)
+- [5.- Regresión](https://github.com/antosource/CursoDataScience)
+- [6.- Modelos de clasificación](https://github.com/antosource/CursoDataScience)
+- [7.- Dimensionalidad y agrupación](https://github.com/antosource/CursoDataScience)
+- [8.- Modelos generalizados](https://github.com/antosource/CursoDataScience)
