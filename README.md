@@ -10,7 +10,7 @@
 
 
 ## Fundamentos Data Science
-- [1.- Estadística univariada y control de flujo](https://github.com/antosource/CursoDataScience)
+- [1.- Estadística univariada y control de flujo](https://github.com/antosource/CursoDataScience/tree/main/FundamentosDataScience/1)
 - [2.- Probabilidades y funciones](https://github.com/antosource/CursoDataScience)
 - [3.- Variables aleatorias y gráficos](https://github.com/antosource/CursoDataScience)
 - [4.- Hipotesis y correlación](https://github.com/antosource/CursoDataScience)
