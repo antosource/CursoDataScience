@@ -1,1 +1,1 @@
-# Unidad 3: Variables aleatorias y gráficos.
+# Unidad 3: Variables aleatorias y gráficos
