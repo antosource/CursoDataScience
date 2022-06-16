@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# version 1
+=======
+>>>>>>> 1afbc10f6194e32b0cd955962655723e0c398112
 import requests
 import json
 
