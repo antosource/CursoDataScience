@@ -36,3 +36,14 @@ def cross_plot(data, barra, variable, categorias, size=(10,7), xlim=(-0.5,3.5), 
     plt.grid()
     fig.tight_layout()  
     plt.show()
+
+
+def plot_hist(df, variable, bins=100):
+    tmp_mean = np.mean(df[variable])
+    tmp_median = np.median(df[variable])
+    plt.hist(df[variable], color='dodgerblue', alpha=.7, bins=bins)
+    plt.axvline(tmp_mean, color='tomato', label="Media:{0}".format(round(tmp_mean, 1)))
+    plt.axvline(tmp_median, color='#f2b41e', label="Mediana: {0}".format(round(tmp_median, 1)))
+    plt.title("Histograma para {0}".format(variable))
+    plt.legend()
+    plt.show()
