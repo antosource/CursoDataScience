@@ -1,0 +1,4 @@
+#f, ax = plt.subplots(figsize=(11, 9)) # Tamaño
+#
+#sns.heatmap(round(df_mod.corr(),2),cmap=cmap, annot=True, vmin=-1, vmax=1,
+#           square=True, linewidths=.5, cbar_kws={"shrink": .5} )
