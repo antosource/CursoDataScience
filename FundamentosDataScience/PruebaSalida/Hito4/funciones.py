@@ -1,4 +1,8 @@
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+
 
 font = {'family': 'serif',
         'color':  'red',
@@ -133,3 +137,25 @@ def mf(df, var_obj):
         if col != var_obj:
             base_formula += f'{col} + '
     return base_formula[:-3]
+
+
+def predict_(df, var_obj):
+    """Función que automatiza las predicciones por LogisticRegression.
+
+    Args:
+        df (dataframe): dataframe con todas las variables a introducir en el modelo, incluida la V.O
+        var_obj (str): variable objetivo
+
+    Returns:
+        array: vector de prueba y vector de predicciones
+    """
+      
+    mat_atr = df.drop(var_obj, axis=1)                  # separando matriz de atributos de vector objetivo
+    vec_obj = df[var_obj]                               # utilizamos dataframe con variables significativas
+    X_train, X_test, y_train, y_test = train_test_split(mat_atr, vec_obj, test_size=.33, random_state=1238) # split de conjuntos de entrenamiento vs prueba
+    X_train_std = StandardScaler().fit_transform(X_train) # estandarizamos conjunto de entrenamiento
+    X_test_std = StandardScaler().fit_transform(X_test) # ajustamos modelo sin alterar hiperparámetros
+    modelo_x =  LogisticRegression().fit(X_train_std, y_train)
+    y_hat = modelo_x.predict(X_test_std) # prediccion de clases y probabilidad
+    
+    return modelo_x, y_test, y_hat
