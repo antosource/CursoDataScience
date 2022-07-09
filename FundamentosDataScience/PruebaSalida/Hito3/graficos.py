@@ -54,3 +54,7 @@ def plot_hist(df, variable, bins=100):
     plt.legend()
     plt.show()
 
+def graficar(df, variable, binarize):    
+    grid = sns.FacetGrid(df, col=binarize, col_wrap=2)
+    axes = grid.axes.flatten()
+    grid.map(sns.distplot, variable) 
