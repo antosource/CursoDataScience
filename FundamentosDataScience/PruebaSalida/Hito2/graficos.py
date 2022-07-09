@@ -1,13 +1,19 @@
+#Librerias
 import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
 import pandas as pd
 
+#Variables
+cmap = sns.diverging_palette(250, 10, as_cmap=True) #Colores Personalizados
+
+#Funciones
 def cross_plot(data, barra, variable, categorias, size=(10,7), xlim=(-0.5,3.5), ylim=(0.1,0.8), titulo = None, order=1, medias=0):
     fig, ax1 = plt.subplots(figsize=size)
     ax2 = ax1.twinx()
     if order==1:
         data = data.sort_values(barra).reset_index(drop=True)
-    data[barra].plot(kind='bar', color='b', ax=ax1, label=barra)
+    data[barra].plot(kind='bar', color='c', ax=ax1, label=barra)
     try:
         for v in variable:
             data[v].plot(kind='line', marker='d', ax=ax2, label=v)
@@ -20,7 +26,7 @@ def cross_plot(data, barra, variable, categorias, size=(10,7), xlim=(-0.5,3.5), 
     plt.xlim(xlim)
     plt.ylim(ylim)
     if medias==1:
-        cc = ['blue','red','gray']
+        cc = ['cyan','red','gray']
         j=0
         try:
             for v in variable:
@@ -47,3 +53,4 @@ def plot_hist(df, variable, bins=100):
     plt.title("Histograma para {0}".format(variable))
     plt.legend()
     plt.show()
+
