@@ -1,8 +1,9 @@
+import pandas as pd
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-
+from sklearn import linear_model
 
 font = {'family': 'serif',
         'color':  'red',
@@ -123,6 +124,27 @@ native_country = {
 
 option_yn = {'yes': 1, 'no': 0}
 
+# Listas
+
+all_col= ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus',
+ 'Medu', 'Fedu', 'traveltime', 'studytime', 'failures', 'schoolsup',
+  'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet',
+   'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health',
+    'absences', 'Mjob_health', 'Mjob_other', 'Mjob_services', 'Mjob_teacher',
+     'Fjob_health', 'Fjob_other', 'Fjob_services', 'Fjob_teacher', 'reason_home',
+      'reason_other', 'reason_reputation', 'guardian_mother', 'guardian_other']
+
+def mpr(vector_objetivo,df_modelo,df_objetivo):
+    X = df_modelo
+    Y = df_objetivo
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=.30, random_state=0)
+    regression = linear_model.LinearRegression(copy_X=True,fit_intercept=True,n_jobs=1)
+    regression.fit(X_train,y_train)
+    prediccion = regression.predict(X_test)
+    df_test = pd.DataFrame({"predict":prediccion, "real":y_test})
+    print("Error promedio Cuadrado:",mean_squared_error(y_test,prediccion))
+    print("R2:",r2_score(y_test,prediccion))  
+    
 
 def mf(df, var_obj):
     """Genera la fórmula del modelo logit con todos sus atributos y variable objetivo.
@@ -159,3 +181,5 @@ def predict_(df, var_obj):
     y_hat = modelo_x.predict(X_test_std) # prediccion de clases y probabilidad
     
     return modelo_x, y_test, y_hat
+
+  
