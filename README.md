@@ -20,11 +20,14 @@
 - [8.- Modelos generalizados](https://github.com/antosource/CursoDataScience/tree/main/FundamentosDataScience/8)
 
 ## Machine Learning
-- [1.- Regularización y Expansiones Basales](https://github.com/antosource/CursoDataScience/)
-- [2.- Bayes Ingenuo](https://github.com/antosource/CursoDataScience/)
-- [3.- Árboles de Decisión](https://github.com/antosource/CursoDataScience/)
-- [4.- Redes Neuronales](https://github.com/antosource/CursoDataScience/)
-- [5.- Tensorflow y Keras](https://github.com/antosource/CursoDataScience/)
+- [1.- Regularización y Expansiones Basales](https://github.com/antosource/CursoDataScience/tree/main/MachineLearning/1)
+- [2.- Algoritmos de Clasificación I](https://github.com/antosource/CursoDataScience/tree/main/MachineLearning/2)
+- [3.- Algoritmos de Clasificación II](https://github.com/antosource/CursoDataScience/3)
+- [4.- Algoritmos de Ensambles I](https://github.com/antosource/CursoDataScience/4)
+- [5.- Algoritmos de Ensambles II](https://github.com/antosource/CursoDataScience/5)
+- [6.- Redes Neuronales I](https://github.com/antosource/CursoDataScience/6)
+- [7.- Redes Neuronales II](https://github.com/antosource/CursoDataScience/7)
+- [8.- Redes Neuronales III](https://github.com/antosource/CursoDataScience/8)
 
 ## SQL para Data Science
 - [1.- PostgreSQL](https://github.com/antosource/CursoDataScience/)
